@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 .food-image {
   background-image: url("../../image/banner.jpg");
-
+  width: auto;
   height: 500px;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,4 +34,104 @@
   position: absolute;
   top: 70%;
   left: 9%;
+}
+
+/* media query */
+
+@media only screen and (max-width: 600px) {
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+  .food-image {
+    background-image: url("../../image/banner.jpg");
+    width: 400px;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .hero-text {
+    text-align: start;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 2px;
+    font-size: 1rem;
+  }
+  .food-btn {
+    text-align: start;
+    position: absolute;
+    top: 25%;
+    left: 13%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+  .food-image {
+    background-image: url("../../image/banner.jpg");
+    width: 740px;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .hero-text {
+    text-align: start;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 2px;
+    font-size: 2rem;
+  }
+  .food-btn {
+    text-align: start;
+    position: absolute;
+    top: 20%;
+    left: 14%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+  .food-image {
+    background-image: url("../../image/banner.jpg");
+    width: auto;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .food-image::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: linear-gradient(to right, #353333 0%, rgba(21, 21, 21, 0) 100%);
+  }
+  .hero-text {
+    text-align: start;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 5px;
+    font-size: 3.5rem;
+  }
+  .food-btn {
+    text-align: start;
+    position: absolute;
+    top: 70%;
+    left: 9%;
+  }
 }

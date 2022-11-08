@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import logo from "../../image/logo.png";
+import { AuthContext } from "../../UseContext/UseContext";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        // singout
+      })
+      .catch((err) => console.error(err));
+  };
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" bg="light">
@@ -16,10 +25,22 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Link className="me-5 text-decoration-none">Home</Link>
+              <Link to="/" className="me-5 text-decoration-none">
+                Home
+              </Link>
             </Nav>
             <Nav>
-              <Link className="text-decoration-none">Login</Link>
+              {user ? (
+                <>
+                  <Link onClick={handleLogOut} className="text-decoration-none">
+                    Log Out
+                  </Link>
+                </>
+              ) : (
+                <Link to="/login" className="text-decoration-none">
+                  Login
+                </Link>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
