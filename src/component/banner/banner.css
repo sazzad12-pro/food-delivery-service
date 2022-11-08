@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+.food-image {
+  background-image: url("../../image/banner.jpg");
+
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.food-image::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: linear-gradient(to right, #353333 0%, rgba(21, 21, 21, 0) 100%);
+}
+.hero-text {
+  text-align: start;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 5px;
+  font-size: 3.5rem;
+}
+.food-btn {
+  text-align: start;
+  position: absolute;
+  top: 70%;
+  left: 9%;
+}
