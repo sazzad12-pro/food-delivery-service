@@ -32,7 +32,9 @@ const Header = () => {
             <Nav>
               {user ? (
                 <>
-                  <Link className="text-decoration-none me-3 ">My Order</Link>
+                  <Link to="/order" className="text-decoration-none me-3 ">
+                    My Order
+                  </Link>
                   <Link to="/review" className="text-decoration-none me-3 ">
                     Review
                   </Link>

@@ -26,7 +26,7 @@ const ServiceItem = ({ service }) => {
               </Card.Text>
               <Card.Title>${price}</Card.Title>
             </Card.Body>
-            <Button>order</Button>
+
             <Link to={`/deliveryDetails/${_id}`}>
               <Button className="ms-5">Details</Button>
             </Link>
