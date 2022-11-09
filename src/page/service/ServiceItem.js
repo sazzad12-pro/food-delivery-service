@@ -1,9 +1,10 @@
 import React from "react";
-import { Card, Col, Row } from "react-bootstrap";
+import { Button, Card, Col, Row } from "react-bootstrap";
 import ReactReadMoreReadLess from "react-read-more-read-less";
+import { Link } from "react-router-dom";
 
 const ServiceItem = ({ service }) => {
-  const { name, description, price, image } = service;
+  const { name, description, price, image, _id } = service;
   return (
     <div className="card-container">
       <Card style={{ maxWidth: "540px" }}>
@@ -23,7 +24,12 @@ const ServiceItem = ({ service }) => {
                   {description}
                 </ReactReadMoreReadLess>
               </Card.Text>
+              <Card.Title>${price}</Card.Title>
             </Card.Body>
+            <Button>order</Button>
+            <Link to={`/deliveryDetails/${_id}`}>
+              <Button className="ms-5">Details</Button>
+            </Link>
           </Col>
         </Row>
       </Card>
