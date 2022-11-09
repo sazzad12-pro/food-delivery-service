@@ -3,6 +3,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
+.img {
+  border-radius: 20px;
+  height: 40px;
+}
 
 /* media query */
 

@@ -3,23 +3,36 @@ import ServiceItem from "./ServiceItem";
 import "./service.css";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { ClipLoader } from "react-spinners";
 
 const Service = () => {
   const [services, setServices] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetch("https://assignment-mu-dusky.vercel.app/services")
       .then((res) => res.json())
-      .then((data) => setServices(data))
+      .then((data) => {
+        setServices(data);
+        setLoading(true);
+      })
       .catch((err) => console.error(err));
   }, []);
 
   return (
     <div>
       <div className="grid mt-3 mb-1">
-        {services.map((service) => (
-          <ServiceItem service={service}></ServiceItem>
-        ))}
+        {loading ? (
+          services.map((service) => (
+            <ServiceItem key={service._id} service={service}></ServiceItem>
+          ))
+        ) : (
+          <ClipLoader
+            size={50}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        )}
       </div>
       <div className="text-center mt-3 mb-3">
         <Link to="/allservice">
