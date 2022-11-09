@@ -32,6 +32,9 @@ const Header = () => {
             <Nav>
               {user ? (
                 <>
+                  <Link to="/review" className="text-decoration-none me-3 ">
+                    Review
+                  </Link>
                   <Link onClick={handleLogOut} className="text-decoration-none">
                     Log Out
                   </Link>

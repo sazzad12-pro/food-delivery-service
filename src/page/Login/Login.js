@@ -11,14 +11,14 @@ const Login = () => {
   const [userEmail, setEmail] = useState("");
 
   // useContext use
-  const { singInGoogle, logInEmailPassword, forgetPassword } =
+  const { googleSingUp, logInEmailPassword, forgetPassword } =
     useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
   // Google sing in
   const handleGoogle = () => {
-    singInGoogle()
+    googleSingUp()
       .then((result) => {
         const user = result.user;
         console.log(user);

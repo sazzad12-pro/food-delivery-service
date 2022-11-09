@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../component/home/Home";
+import Review from "../component/Reviews/Review";
 import Main from "../layout/Main";
 import Login from "../page/Login/Login";
 import Register from "../page/Register/Register";
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
           fetch(
             `https://assignment-mu-dusky.vercel.app/allService/${params.id}`
           ),
+      },
+      {
+        path: "/review",
+        element: <Review></Review>,
       },
     ],
   },
