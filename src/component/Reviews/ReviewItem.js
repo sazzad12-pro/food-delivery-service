@@ -1,5 +1,6 @@
 import React from "react";
 import { FaPenFancy, FaTrashAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ReviewItem = ({ person, handleDelete }) => {
   const { reviewer, email, img, message, _id } = person;
@@ -17,10 +18,12 @@ const ReviewItem = ({ person, handleDelete }) => {
           <button onClick={() => handleDelete(_id)}>
             <FaTrashAlt />{" "}
           </button>
-          <button className="ms-1">
-            {" "}
-            <FaPenFancy />
-          </button>
+          <Link to={`/update/${_id}`}>
+            <button className="ms-1">
+              {" "}
+              <FaPenFancy />
+            </button>
+          </Link>
         </div>
       </div>
     </div>
