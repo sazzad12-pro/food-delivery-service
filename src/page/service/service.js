@@ -16,7 +16,7 @@ const Service = () => {
 
   return (
     <div>
-      <div className="grid">
+      <div className="grid mt-3 mb-1">
         {services.map((service) => (
           <ServiceItem service={service}></ServiceItem>
         ))}
