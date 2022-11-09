@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Grilled salmon fillet with salad",
+    "description": "This Grilled Salmon Salad with Creamy Cilantro Lime Dressing is perfect for summer barbecues and outdoor gatherings. Chock full of fresh organic produce, not only is this entree salad healthy and easy to make, it’s bursting with delicious summertime flavor! Keto and Low-carb..",
+    "price": "39",
+    "image": "https://i.ibb.co/f2ByMqH/greek-salmon-salad-with-lemon-basil-dressing-1200.jpg",
+    "rating": "1"
+  },
+  {
+    "name": "Chicken in Teriyaki Sauce with Cucumber",
+    "description": "Our easy, healthy teriyaki sauce – made from tamari, honey, balsamic and lime – is a sweet-sticky partner for succulent free-range British chicken thighs. You’ll love our refreshing salsa, too, stuffed with juicy mango and cooling cucumber. ",
+    "price": "29",
+    "image": "https://i.ibb.co/LZRwRgQ/Easy-Teriyaki-Chicken-Recipe-2-1200.jpg",
+    "rating": "2"
+  },
+  {
+    "name": "Carrot, Leek and Cardamom Soup",
+    "description": " Carrot and cardamon soup is a warm and hearty vegetarian soup which can be prepared in no time at all. It can easily be made in bulk and keeps well in the fridge for several days. The quantities in the recipe below are sufficient for approximately 3 servings. Jump to Recipe",
+    "price": "44",
+    "image": "https://i.ibb.co/DzhGPrw/Healthy-Carrot-and-Leek-Soup-Recipe-23.jpg",
+    "rating": "2"
+  },
+  {
+    "name": "Insalata di shrimp Italian recipe",
+    "description": "It's a light, bright salad of gently cooked and marinated seafood, including shrimp, squid, scallops, and mussels, with lemon juice, olive oil, and parsley. Seafood salad is, at its heart, incredibly delicious and simple.The seafood should be fresh and tender, the dressing bright and flavorful. It should be served chilled. That's it, really. As I always say, the heart of Italian cooking is the highlighting the simple beauty of the ingredients.If you desire a taste of Mediterranean style Italy in your home. TRY THIS RECIPE!",
+    "price": "50",
+    "image": "https://i.ibb.co/wQkBkTx/IMG-1353.jpg",
+    "rating": "3"
+  },
+  {
+    "name": "Sandwich",
+    "description": "one slice of bread covered with food. Have an open-faced sandwich, with one slice of bread instead of two, mustard instead of butter, and some vegetable sticks to munch on. Your Health & Fitness. : something resembling a sandwich..",
+    "price": "20",
+    "image": "https://i.ibb.co/tHNWr1V/juicy-lucy-burgers-recipe-6.pnghttps://i.ibb.co/3Tr82qB/image.png",
+    "rating": "4"
+  },
+  {
+    "name": "Roast Beef Sandwich",
+    "description": "If making this sandwich ahead, pack the fried onions (and yes, we admit to loving the ones that come in a can and are best known for topping green bean casserole) separately in an airtight container and tuck them into the sandwich just before eating it, so they keep their crunch..",
+    "price": "70",
+    "image": "https://i.ibb.co/cgPJYt5/Roast-Beef-Sandwicheswith-Horseradish-Sauce8009790.png",
+    "rating": "3"
+  }
+]
