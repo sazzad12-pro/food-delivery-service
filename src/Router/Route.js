@@ -26,13 +26,16 @@ export const router = createBrowserRouter([
       {
         path: "/allservice",
         element: <AllService></AllService>,
-        loader: () => fetch("http://localhost:5000/allService"),
+        loader: () =>
+          fetch("https://assignment-mu-dusky.vercel.app/allService"),
       },
       {
         path: "/deliveryDetails/:id",
         element: <ViewDetails></ViewDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allService/${params.id}`),
+          fetch(
+            `https://assignment-mu-dusky.vercel.app/allService/${params.id}`
+          ),
       },
     ],
   },
