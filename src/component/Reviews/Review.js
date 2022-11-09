@@ -1,9 +1,47 @@
-import React, { useContext } from "react";
-import { AuthContext } from "../../UseContext/UseContext";
+import React, { useEffect, useState } from "react";
+
+import ReviewItem from "./ReviewItem";
 
 const Review = () => {
-  const { user } = useContext(AuthContext);
-  return <div></div>;
+  const [userReview, setUserReview] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/review")
+      .then((res) => res.json())
+      .then((data) => setUserReview(data));
+  }, []);
+
+  const handleDelete = (id) => {
+    const procced = window.confirm(`are sure to delete `);
+    if (procced) {
+      fetch(`http://localhost:5000/review/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount > 0) {
+            const reming = userReview.filter((re) => re._id !== id);
+            setUserReview(reming);
+          }
+        });
+    }
+  };
+
+  return (
+    <div>
+      {userReview.map((person) => (
+        <ReviewItem
+          key={person._id}
+          person={person}
+          handleDelete={handleDelete}
+        ></ReviewItem>
+      ))}
+    </div>
+  );
 };
 
 export default Review;
+
+/* 
+  
+*/

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../UseContext/UseContext";
 
 const ViewDetails = () => {
@@ -60,9 +60,8 @@ const ViewDetails = () => {
         <h6>people say about {name}</h6>
         {userReview.map((u) => (
           <>
-            <img className="img" src={u.img} alt="" />
+            <img key={u._id} className="img" src={u.img} alt="" />
             <Card.Text>{u.message}</Card.Text>
-            <p></p>
           </>
         ))}
       </div>
@@ -101,7 +100,13 @@ const ViewDetails = () => {
           </form>
         </div>
       ) : (
-        "Please login to add a review"
+        <div>
+          Please{" "}
+          <Link className="text-decoration-none" to="/login">
+            Login
+          </Link>{" "}
+          to add a review
+        </div>
       )}
     </div>
   );
