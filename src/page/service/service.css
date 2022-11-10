@@ -33,4 +33,10 @@
   .home {
     margin-left: 0;
   }
+  .detail {
+    margin-left: 50px;
+  }
+  .card-container {
+    margin-top: 40px;
+  }
 }

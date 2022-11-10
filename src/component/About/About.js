@@ -4,15 +4,15 @@ import img from "../../image/cooking.jpg";
 
 const About = () => {
   return (
-    <div className="mt-3 mb-5">
-      <div className="text-center">
-        <h1 className="text-dark fw-bold ">Our story</h1>
+    <div className="mt-3 mb-5 bg-light">
+      <div className="text-md-center ">
+        <h1 className="text-success fw-bold ">Our story</h1>
       </div>
       <div>
         <Container>
           <Row>
-            <Col lg={6}>
-              <h1 className="fw-bold text-white">
+            <Col xs={6} lg={6}>
+              <h1 className="fw-bold text-secondary">
                 We Are Locally Crafted Food
               </h1>
               <p>
@@ -23,7 +23,7 @@ const About = () => {
                 tender Chicken Contadina.
               </p>
             </Col>
-            <Col lg={6}>
+            <Col xs={7} lg={6}>
               <img className="img-fluid" src={img} alt="" />
             </Col>
           </Row>

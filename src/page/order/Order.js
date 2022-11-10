@@ -29,7 +29,7 @@ const Order = () => {
     setInput(newUser);
   };
   return (
-    <div className="text-center mt-3">
+    <div className="text-center mt-3 bg-light">
       <h3 className="mb-1 text-success">Add Your Service</h3>
       <form onSubmit={handleChange}>
         <input

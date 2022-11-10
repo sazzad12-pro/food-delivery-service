@@ -5,7 +5,7 @@ import time from "../../image/feature_icon3.svg";
 
 const Item = () => {
   return (
-    <div className="mt-5 mb-5 mx-5">
+    <div className="mt-5 mb-5 mx-5 bg-light">
       <div className="service">
         <div>
           <img src={order} alt="" />
