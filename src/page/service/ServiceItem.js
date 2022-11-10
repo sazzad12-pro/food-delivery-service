@@ -2,6 +2,8 @@ import React from "react";
 import { Button, Card, Col, Row } from "react-bootstrap";
 import ReactReadMoreReadLess from "react-read-more-read-less";
 import { Link } from "react-router-dom";
+import { PhotoProvider, PhotoView } from "react-photo-view";
+import "react-photo-view/dist/react-photo-view.css";
 
 const ServiceItem = ({ service }) => {
   const { name, description, price, image, _id } = service;
@@ -10,7 +12,11 @@ const ServiceItem = ({ service }) => {
       <Card style={{ maxWidth: "540px" }}>
         <Row>
           <Col md={4}>
-            <img className="img-fluid h-100 w-100" src={image} alt="" />
+            <PhotoProvider>
+              <PhotoView src={image}>
+                <img className="img-fluid h-100 w-100" src={image} alt="" />
+              </PhotoView>
+            </PhotoProvider>
           </Col>
           <Col md={8}>
             <Card.Body>
