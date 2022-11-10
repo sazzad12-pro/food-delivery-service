@@ -12,7 +12,9 @@ const About = () => {
         <Container>
           <Row>
             <Col lg={6}>
-              <h1 className="fw-bold">We Are Locally Crafted Food</h1>
+              <h1 className="fw-bold text-white">
+                We Are Locally Crafted Food
+              </h1>
               <p>
                 In our kitchen with people who are important to you,
                 conversations that bring you closer to each other. Traditional

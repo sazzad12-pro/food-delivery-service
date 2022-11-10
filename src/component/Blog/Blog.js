@@ -1,7 +1,9 @@
 import React from "react";
 import Accordion from "react-bootstrap/Accordion";
+import UseTitle from "../hook/UseTitle";
 
 const Blog = () => {
+  UseTitle("Blog");
   return (
     <div className="w-50 mx-auto">
       <Accordion defaultActiveKey="0">
@@ -34,7 +36,9 @@ const Blog = () => {
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
-          {/* <Accordion.Header>What is the Difference between javascript and nodeJs </Accordion.Header> */}
+          <Accordion.Header>
+            What is the Difference between javascript and nodeJs{" "}
+          </Accordion.Header>
           <Accordion.Body>
             JavaScript is a simple programming language that can be used with
             any browser that has the JavaScript Engine installed. Node. js, on

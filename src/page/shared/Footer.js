@@ -43,7 +43,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <h1 className="text-white text-center">&copy;220</h1>
+      <h4 className="text-white text-center">
+        Copyright&copy;2022 All Rights Reserved.
+      </h4>
     </div>
   );
 };

@@ -3,12 +3,15 @@ import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import UseTitle from "../../component/hook/UseTitle";
 import food from "../../image/food.png";
 import { AuthContext } from "../../UseContext/UseContext";
 
 const Login = () => {
   const [error, setError] = useState("");
   const [userEmail, setEmail] = useState("");
+
+  UseTitle("Login");
 
   // useContext use
   const { googleSingUp, logInEmailPassword, forgetPassword } =
@@ -35,7 +38,7 @@ const Login = () => {
           .then((res) => res.json())
           .then((data) => {
             localStorage.setItem("service", data.token);
-            // navigate(from, { replace: true });
+            navigate(from, { replace: true });
           });
       })
       .catch((err) => {
@@ -53,7 +56,23 @@ const Login = () => {
     logInEmailPassword(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
+        const currentUser = {
+          email: user.email,
+        };
+
+        fetch("http://localhost:5000/jwt", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(currentUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            localStorage.setItem("service", data.token);
+            navigate(from, { replace: true });
+          });
+
         navigate("/");
         // navigate(from, { replace: true });
       })

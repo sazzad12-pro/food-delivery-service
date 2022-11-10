@@ -21,6 +21,9 @@ const Service = () => {
 
   return (
     <div>
+      <div className="text-center">
+        <h2 className="fw-bold text-dark">Our service</h2>
+      </div>
       <div className="grid mt-3 mb-1">
         {loading ? (
           services.map((service) => (
