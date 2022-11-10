@@ -11,9 +11,6 @@ const Banner = () => {
           <br />
           Delivery Service
         </h1>
-        <div className="food-btn">
-          <button>choes your meal</button>
-        </div>
       </div>
     </div>
   );
