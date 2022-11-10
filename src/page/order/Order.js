@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { toast } from "react-toastify";
+import UseTitle from "../../component/hook/UseTitle";
 
 const Order = () => {
+  UseTitle("My Service");
   const [input, setInput] = useState({});
   const handleChange = (e) => {
     e.preventDefault();
@@ -15,8 +16,8 @@ const Order = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
-          toast("order place successfully");
-          e.form.reset();
+          alert("oder place ");
+          e.target.form.reset();
         }
       });
   };

@@ -8,7 +8,8 @@ import Main from "../layout/Main";
 import Login from "../page/Login/Login";
 import Order from "../page/order/Order";
 import Register from "../page/Register/Register";
-import AllService from "../page/service/AllService";
+import AddService from "../page/service/AddService";
+
 import ViewDetails from "../page/viewDetails/ViewDetails";
 import PrivateRoute from "./PrivateRoute";
 
@@ -29,12 +30,7 @@ export const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
-      {
-        path: "/allservice",
-        element: <AllService></AllService>,
-        loader: () =>
-          fetch("https://assignment-mu-dusky.vercel.app/allService"),
-      },
+
       {
         path: "/deliveryDetails/:id",
         element: <ViewDetails></ViewDetails>,
@@ -68,9 +64,25 @@ export const router = createBrowserRouter([
         element: <Blog></Blog>,
       },
       {
+        path: "/addservice",
+        element: <AddService></AddService>,
+        loader: () =>
+          fetch("https://assignment-sazzad12-pro.vercel.app/allService"),
+      },
+      {
         path: "*",
         element: <NotFound></NotFound>,
       },
     ],
   },
 ]);
+
+/* 
+
+{
+        path: "/allservice",
+        element: <AllService></AllService>,
+        loader: () => fetch("http://localhost:5000/allService"),
+      },
+
+*/

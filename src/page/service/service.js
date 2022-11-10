@@ -38,7 +38,8 @@ const Service = () => {
         )}
       </div>
       <div className="text-center mt-3 mb-3">
-        <Link to="/allservice">
+        <br />
+        <Link to="/addservice">
           <Button variant="success">See All</Button>
         </Link>
       </div>

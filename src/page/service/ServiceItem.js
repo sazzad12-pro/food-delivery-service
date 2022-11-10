@@ -22,13 +22,14 @@ const ServiceItem = ({ service }) => {
             <Card.Body>
               <Card.Title>{name}</Card.Title>
               <Card.Text>
-                <ReactReadMoreReadLess
-                  charLimit={100}
-                  readMoreText={"Read more ▼"}
-                  readLessText={"Read less ▲"}
-                >
-                  {description}
-                </ReactReadMoreReadLess>
+                {description?.length > 100 ? (
+                  <>
+                    {description.slice(0, 100) + "..."}{" "}
+                    <Link to={`/deliveryDetails/${_id}`}>Read More</Link>{" "}
+                  </>
+                ) : (
+                  description
+                )}
               </Card.Text>
               <Card.Title>${price}</Card.Title>
             </Card.Body>
