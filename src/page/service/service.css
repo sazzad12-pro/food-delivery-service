@@ -11,8 +11,12 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-.btn {
+.detail {
   margin-left: 175px;
+}
+.service {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 /* media query */
 

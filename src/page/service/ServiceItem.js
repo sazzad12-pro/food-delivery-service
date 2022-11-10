@@ -28,7 +28,7 @@ const ServiceItem = ({ service }) => {
             </Card.Body>
 
             <Link to={`/deliveryDetails/${_id}`}>
-              <Button className="w-50 btn">Details</Button>
+              <Button className="w-50 detail">Details</Button>
             </Link>
           </Col>
         </Row>

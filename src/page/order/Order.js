@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const Order = () => {
   const [input, setInput] = useState({});
@@ -14,7 +15,7 @@ const Order = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
-          alert("order placed successfully");
+          toast("order place successfully");
           e.form.reset();
         }
       });
