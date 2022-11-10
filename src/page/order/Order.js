@@ -4,7 +4,7 @@ const Order = () => {
   const [input, setInput] = useState({});
   const handleChange = (e) => {
     e.preventDefault();
-    fetch("http://localhost:5000/allService", {
+    fetch("https://assignment-sazzad12-pro.vercel.app/allService", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -28,7 +28,8 @@ const Order = () => {
     setInput(newUser);
   };
   return (
-    <div className="text-center">
+    <div className="text-center mt-3">
+      <h3 className="mb-1 text-success">Add Your Service</h3>
       <form onSubmit={handleChange}>
         <input
           className="w-50"

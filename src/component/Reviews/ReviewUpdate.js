@@ -11,7 +11,7 @@ const ReviewUpdate = () => {
 
   const handleUpdate = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:5000/review/${update._id}`, {
+    fetch(`https://assignment-sazzad12-pro.vercel.app/review/${update._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

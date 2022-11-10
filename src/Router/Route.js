@@ -53,7 +53,9 @@ export const router = createBrowserRouter([
         path: "/update/:id",
         element: <ReviewUpdate></ReviewUpdate>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/review/${params.id}`),
+          fetch(
+            `https://assignment-sazzad12-pro.vercel.app/review/${params.id}`
+          ),
       },
       {
         path: "/order",

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../UseContext/UseContext";
 
 const Register = () => {
@@ -10,12 +10,14 @@ const Register = () => {
   // user track with state start
   const [passwordError, setError] = useState("");
   const [emailError, setEmailError] = useState("");
+  const navigate = useNavigate();
   // useContext googleProvider
   const handleGoogleLogin = () => {
     googleSingUp()
       .then((result) => {
         const user = result.user;
         console.log(user);
+        navigate("/");
       })
       .catch((err) => console.error(err));
   };
@@ -37,6 +39,7 @@ const Register = () => {
         const user = result.user;
         console.log(user);
         form.reset();
+        navigate("/");
         handleNamePhoto(name, photoURL);
       })
       .catch((err) => {

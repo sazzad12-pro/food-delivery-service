@@ -6,7 +6,7 @@ const ReviewItem = ({ person, handleDelete }) => {
   const { reviewer, email, img, message, _id } = person;
 
   return (
-    <div className="w-50 mx-auto">
+    <div className="w-50 mx-auto mt-3 mb-3">
       <div className="review">
         <img className="img" src={img} alt="" />
         <h4>{reviewer}</h4>

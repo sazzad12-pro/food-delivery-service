@@ -21,8 +21,22 @@ const Login = () => {
     googleSingUp()
       .then((result) => {
         const user = result.user;
-        console.log(user);
-        navigate(from, { replace: true });
+        navigate("/");
+        const currentUser = {
+          email: user.email,
+        };
+        fetch("http://localhost:5000/jwt", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(currentUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            localStorage.setItem("service", data.token);
+            // navigate(from, { replace: true });
+          });
       })
       .catch((err) => {
         console.error(err);
@@ -40,8 +54,8 @@ const Login = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user);
-
-        navigate(from, { replace: true });
+        navigate("/");
+        // navigate(from, { replace: true });
       })
       .catch((err) => {
         console.error(err);

@@ -6,7 +6,7 @@ const Review = () => {
   const [userReview, setUserReview] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/review")
+    fetch("https://assignment-sazzad12-pro.vercel.app/review")
       .then((res) => res.json())
       .then((data) => setUserReview(data));
   }, []);
@@ -14,13 +14,13 @@ const Review = () => {
   const handleDelete = (id) => {
     const procced = window.confirm(`are sure to delete `);
     if (procced) {
-      fetch(`http://localhost:5000/review/${id}`, {
+      fetch(`https://assignment-sazzad12-pro.vercel.app/review/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount > 0) {
-            const reming = userReview.filter((re) => re._id !== id);
+            const reming = userReview?.filter((re) => re._id !== id);
             setUserReview(reming);
           }
         });

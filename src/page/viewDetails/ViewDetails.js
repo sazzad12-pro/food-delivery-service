@@ -31,7 +31,7 @@ const ViewDetails = () => {
       message,
       img,
     };
-    fetch("http://localhost:5000/review", {
+    fetch("https://assignment-sazzad12-pro.vercel.app/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",
