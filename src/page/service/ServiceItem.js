@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Card, Col, Row } from "react-bootstrap";
-import ReactReadMoreReadLess from "react-read-more-read-less";
 import { Link } from "react-router-dom";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";

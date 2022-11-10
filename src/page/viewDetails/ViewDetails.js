@@ -4,7 +4,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../UseContext/UseContext";
 
 const ViewDetails = () => {
-  const [{ name, price, description, image, _id }] = useLoaderData();
+  const [{ name, description, image, _id }] = useLoaderData();
   const { user } = useContext(AuthContext);
   const [userReview, setReview] = useState([]);
 
